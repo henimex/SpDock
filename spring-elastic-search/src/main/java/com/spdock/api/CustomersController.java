@@ -37,8 +37,14 @@ public final class CustomersController {
 
     @GetMapping("{search}")
     public List<Customer> getCustomer(@PathVariable String search){
-        var customers = customerRepository.getByCustomQuery(search);
-        return customers;
+        return customerRepository.getByCustomQuery(search);
     }
+
+    @GetMapping("2nd/{search}")
+    public List<Customer> getCustomerSecond(@PathVariable String search){
+        return customerRepository.getByCustomerName(search);
+    }
+
+
 }
 

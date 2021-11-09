@@ -16,7 +16,7 @@ public class UsersController {
     @Autowired
     private UserRepository userRepository;
 
-/*    @PostConstruct
+/*   @PostConstruct
     public void init(){
         User user = new User();
         user.setName("Jospeh");
