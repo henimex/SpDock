@@ -15,4 +15,6 @@ public interface CustomerRepository extends ElasticsearchRepository<Customer, St
     List<Customer> getByCustomQuery(String search);
 
     List<Customer> getByCustomerName(String search);
+
+    List<Customer> getByCustomerSurnameLike(String search);
 }

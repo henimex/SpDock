@@ -36,13 +36,18 @@ public final class CustomersController {
     }
 
     @GetMapping("{search}")
-    public List<Customer> getCustomer(@PathVariable String search){
-        return customerRepository.getByCustomQuery(search);
+    public ResponseEntity<List<Customer>> getCustomer(@PathVariable String search){
+        return ResponseEntity.ok(customerRepository.getByCustomQuery(search));
     }
 
     @GetMapping("2nd/{search}")
-    public List<Customer> getCustomerSecond(@PathVariable String search){
-        return customerRepository.getByCustomerName(search);
+    public ResponseEntity<List<Customer>> getCustomerSecond(@PathVariable String search){
+        return ResponseEntity.ok(customerRepository.getByCustomerName(search));
+    }
+
+    @GetMapping("surname/{search}")
+    public ResponseEntity<List<Customer>> getCustomerSurnameLike(@PathVariable String search){
+        return ResponseEntity.ok(customerRepository.getByCustomerSurnameLike(search));
     }
 
 
