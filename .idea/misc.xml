@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-elastic-search/pom.xml" />
         <option value="$PROJECT_DIR$/spring-rabbitmq-/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-rabbitmq/pom.xml" />
       </list>
     </option>
   </component>
